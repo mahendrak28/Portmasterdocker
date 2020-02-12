@@ -1,0 +1,35 @@
+﻿<div class="py-5">
+  <div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+      <span class="anchor" id="formLogin"></span>
+
+         <div class="card rounded-0">
+        <div class="card-header">
+          <h4 class="h3 mb-3 font-weight-normal">Please sign in</h4>
+        </div>
+        <div *ngIf="showErrorMessage">
+          <h1>Invalid username and password Please try again</h1>
+        </div>
+        <div class="card-body">
+          <form class="form">
+            <div class="form-group">
+              <label for="">User Name</label>
+              <input [(ngModel)]="loginUserData.username" name="username" type="text" class="form-control rounded-0"
+                required>
+            </div>
+            <div class="form-group">
+              <label for=""> Password</label>
+              <input [(ngModel)]="loginUserData.password" name="password" type="password" class="form-control rounded-0"
+                required>
+            </div>
+
+            <a routerLink="/register" class="btn btn-primary float-right">Register</a>
+            <button (click)="loginUser()" type="button" class="btn btn-primary float-right">Sign In </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
